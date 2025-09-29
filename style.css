@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inputPlace button,#inputName{
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+}
+.inputPlace button{
+    background-color: #10a63d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+#inputName{
+    border: 1px solid rgb(203, 203, 203);
+}
+#inputName:focus{
+    outline: none;
+}
+.weatherApp{
+    position: relative;
+    background-color: aliceblue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+#weatherInfo{
+    width: 400px;
+    background: linear-gradient(180deg, #1e90ff, #99badd);
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weatherInfo img{
+    height: 120px;
+    width: 30%;
+    text-align: center;
+}
+
+.loadingState{
+    position: absolute;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+}
+.loading{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    border-top: 5px solid #36b2f5;
+    animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
